@@ -93,7 +93,6 @@ worldcom = pd.DataFrame({
     'Market_Cap': [115000e6, 45000e6, 150e6], 
     'Depreciation': [8485e6, 4831e6, 3291e6]  
 })
-    })
     
     # IL&FS Data (2015-2018)
     ilfs = pd.DataFrame({
