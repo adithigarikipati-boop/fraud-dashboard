@@ -340,8 +340,13 @@ def main():
     
     year_idx = df[df['Year'] == selected_year].index[0]
     z_score = z_scores.iloc[year_idx]
-    m_score = m_scores[year_idx] if not np.isnan(m_scores[year_idx]) else 0
-    
+    m_score = m_scores[year_idx]
+
+    if np.isnan(m_score):
+    m_display = "Not Available (First Year)"
+    else:
+    m_display = f"{m_score:.3f}"
+
     # Risk assessment
     if z_score > 2.99:
         z_risk = "Low"
