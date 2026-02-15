@@ -68,7 +68,7 @@ def load_company_data():
     """Load financial data for all companies"""
 
         # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
-worldcom = pd.DataFrame({
+ worldcom = pd.DataFrame({
     'Year': [2000, 2001, 2002],
     
     # Income Statement - From Consolidated Statements of Operations (RESTATED)
@@ -95,7 +95,7 @@ worldcom = pd.DataFrame({
 })
     
     # IL&FS Data (2015-2018)
-    ilfs = pd.DataFrame({
+ilfs = pd.DataFrame({
         'Year': [2015, 2016, 2017, 2018],
         'Revenue': [120.5e8, 135.2e8, 148.9e8, 142.3e8],
         'COGS': [45.2e8, 52.1e8, 58.7e8, 62.4e8],
@@ -116,7 +116,7 @@ worldcom = pd.DataFrame({
     })
     
     # Xerox Corporation Data (1997-2000)
-    xerox = pd.DataFrame({
+xerox = pd.DataFrame({
         'Year': [1997, 1998, 1999, 2000],
         'Revenue': [18.166e9, 19.447e9, 19.228e9, 18.632e9],
         'COGS': [9.456e9, 10.234e9, 10.128e9, 9.845e9],
@@ -137,7 +137,7 @@ worldcom = pd.DataFrame({
     })
     
     # Bhushan Steel Data (2014-2017)
-    bhushan = pd.DataFrame({
+bhushan = pd.DataFrame({
         'Year': [2014, 2015, 2016, 2017],
         'Revenue': [78.45e8, 85.67e8, 82.34e8, 75.89e8],
         'COGS': [62.34e8, 68.45e8, 67.89e8, 65.23e8],
