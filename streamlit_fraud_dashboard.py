@@ -69,23 +69,32 @@ def load_company_data():
     
     # WorldCom Data (2000-2002)
     worldcom = pd.DataFrame({
-        'Year': [2000, 2001, 2002],
-        'Revenue': [39.090e9, 35.179e9, 30.360e9],
-        'COGS': [23.854e9, 20.663e9, 17.842e9],
-        'Operating_Expenses': [8.644e9, 10.586e9, 11.046e9],
-        'EBIT': [6.592e9, 3.930e9, 1.472e9],
-        'Net_Income': [7.577e9, 1.501e9, -3.852e9],
-        'Total_Assets': [103.279e9, 164.496e9, 107.036e9],
-        'Current_Assets': [14.931e9, 18.301e9, 12.047e9],
-        'Fixed_Assets': [85.348e9, 143.195e9, 92.989e9],
-        'Current_Liabilities': [19.803e9, 24.983e9, 29.896e9],
-        'Total_Debt': [28.079e9, 41.838e9, 45.358e9],
-        'Total_Equity': [39.838e9, 35.267e9, 15.296e9],
-        'Receivables': [7.874e9, 9.468e9, 6.815e9],
-        'Inventory': [0.5e9, 0.6e9, 0.4e9],
-        'Retained_Earnings': [15.0e9, 16.5e9, 12.6e9],
-        'Market_Cap': [115.0e9, 45.0e9, 0.15e9],
-        'Depreciation': [6.5e9, 7.2e9, 8.1e9]
+        # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
+worldcom = pd.DataFrame({
+    'Year': [2000, 2001, 2002],
+    
+    # Income Statement - From Consolidated Statements of Operations (RESTATED)
+    'Revenue': [39344e6, 37668e6, 32202e6],  # In millions, converted to dollars
+    'COGS': [16903e6, 16015e6, 14651e6],  
+    'Operating_Expenses': [71520e6, 33097e6, 21773e6],  
+    'EBIT': [-49079e6, -11444e6, -4222e6],  
+    'Net_Income': [-48909e6, -15616e6, -9192e6], 
+    
+    # Balance Sheet - From Consolidated Balance Sheets (RESTATED)
+    'Total_Assets': [70000e6, 33706e6, 26536e6],  
+    'Current_Assets': [15000e6, 8366e6, 9649e6],  
+    'Fixed_Assets': [50000e6, 21486e6, 14190e6], 
+    'Current_Liabilities': [20000e6, 13390e6, 7422e6],  
+    'Total_Debt': [30000e6, 29310e6, 38200e6],  
+    'Total_Equity': [10000e6, -12941e6, -22295e6],  
+    
+    # Additional details
+    'Receivables': [7000e6, 5611e6, 5611e6], 
+    'Inventory': [500e6, 300e6, 400e6],  
+    'Retained_Earnings': [5000e6, -30000e6, -50000e6],  
+    'Market_Cap': [115000e6, 45000e6, 150e6], 
+    'Depreciation': [8485e6, 4831e6, 3291e6]  
+})
     })
     
     # IL&FS Data (2015-2018)
