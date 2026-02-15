@@ -86,6 +86,7 @@ def load_company_data():
         'Retained_Earnings': [17694e6, 19172e6],
         'Market_Cap': [115000e6, 45000e6],
         'Depreciation': [6373e6, 7490e6],
+        'CFO':[10240e6, 7001e6]
     })
     
     # IL&FS Data (2015-2018)
@@ -106,7 +107,9 @@ def load_company_data():
         'Inventory': [12.4e8, 14.5e8, 16.2e8, 14.8e8],
         'Retained_Earnings': [85.4e8, 95.2e8, 105.8e8, 62.4e8],
         'Market_Cap': [180.0e8, 195.0e8, 210.0e8, 45.0e8],
-        'Depreciation': [38.5e8, 42.3e8, 46.8e8, 51.2e8]
+        'Depreciation': [38.5e8, 42.3e8, 46.8e8, 51.2e8],
+        'CFO': [28.4e8, 31.7e8, 34.9e8, -52.3e8],
+
     })
     
     # Xerox Corporation Data (1997-2000)
@@ -127,7 +130,9 @@ def load_company_data():
         'Inventory': [2.456e9, 2.567e9, 2.678e9, 2.734e9],
         'Retained_Earnings': [6.234e9, 6.892e9, 7.456e9, 7.892e9],
         'Market_Cap': [25.5e9, 28.4e9, 22.6e9, 18.2e9],
-        'Depreciation': [1.567e9, 1.678e9, 1.789e9, 1.892e9]
+        'Depreciation': [1.567e9, 1.678e9, 1.789e9, 1.892e9],
+        'CFO': [2.301e9, 2.112e9, 2.487e9, 1.845e9],
+
     })
     
     # Bhushan Steel Data (2014-2017)
@@ -148,7 +153,9 @@ def load_company_data():
         'Inventory': [32.45e8, 35.67e8, 37.89e8, 36.23e8],
         'Retained_Earnings': [45.67e8, 48.56e8, 46.11e8, 37.44e8],
         'Market_Cap': [125.0e8, 110.0e8, 75.0e8, 35.0e8],
-        'Depreciation': [18.45e8, 20.23e8, 21.67e8, 22.89e8]
+        'Depreciation': [18.45e8, 20.23e8, 21.67e8, 22.89e8],
+        'CFO': [9.45e8, 8.12e8, -6.78e8, -18.45e8],
+
     })
     
     return {
@@ -202,7 +209,7 @@ def calculate_beneish_m_score(df):
         
         current_ca = current['Current_Assets'] - current['Receivables']
         current_cl = current['Current_Liabilities']
-        tata = (current['Net_Income'] - (current_ca - current_cl)) / current['Total_Assets']
+        tata = (current['Net_Income'] - current['CFO']) / current['Total_Assets']
         
         m_score = -4.84 + 0.92*dsri + 0.528*gmi + 0.404*aqi + 0.892*sgi + \
                   0.115*depi - 0.172*sgai + 4.679*tata - 0.327*lvgi
