@@ -343,9 +343,10 @@ def main():
     m_score = m_scores[year_idx]
 
     if np.isnan(m_score):
-    m_display = "Not Available (First Year)"
-else:
-    m_display = f"{m_score:.3f}"
+        m_display = "Not Available (First Year)"
+    else:
+        m_display = f"{m_score:.3f}"
+
 
     # Risk assessment
     if z_score > 2.99:
