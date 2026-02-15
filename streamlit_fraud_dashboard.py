@@ -427,7 +427,7 @@ def main():
     st.markdown("<h2>📊 Benford's Law Analysis</h2>", unsafe_allow_html=True)
     
     financial_values = []
-    for col in ['Revenue', 'COGS', 'Operating_Expenses', 'Total_Assets', 'Current_Assets', 
+    for col in ['Revenue', 'COGS', 'SGA', 'Total_Assets', 'Current_Assets', 
                 'Current_Liabilities', 'Total_Debt', 'Receivables']:
         financial_values.extend(df[col].tolist())
     
