@@ -69,23 +69,23 @@ def load_company_data():
     
     # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
     worldcom = pd.DataFrame({
-        'Year': [2000, 2001, 2002],
-        'Revenue': [39344e6, 37668e6, 32202e6],
-        'COGS': [ (16903 + 5377) * 1e6, (16015 + 5377) * 1e6, (14651 + 4339) * 1e6],
-        'SGA': [8714e6, 10660e6, 9179e6],
-        'EBIT': [-49079e6, -11444e6, -4222e6],
-        'Net_Income': [-48909e6, -15616e6, -9192e6],
-        'Total_Assets': [70000e6, 33706e6, 26536e6],
-        'Current_Assets': [15000e6, 8366e6, 9649e6],
-        'Fixed_Assets': [50000e6, 21486e6, 14190e6],
-        'Current_Liabilities': [20000e6, 13390e6, 7422e6],
-        'Total_Debt': [30000e6, 29310e6, 1046e6],
+        'Year': [2000, 2001],
+        'Revenue': [39090e6, 35181e6],
+        'COGS': [ 15508e6, 15910e6],
+        'SGA': [7421e6, 7547e6],
+        'EBIT': [10345e6, 7519e6],
+        'Net_Income': [5134e6, 1514e6],
+        'Total_Assets': [104363e6, 107485e6],
+        'Current_Assets': [21033e6, 19526e6],
+        'Fixed_Assets': [54653e6, 58365e6],
+        'Current_Liabilities': [17149e6, 20063e6],
+        'Total_Debt': [30323e6, 31983e6],
         'Total_Equity': [10000e6, -12941e6, -22295e6],
-        'Receivables': [4700e6, 4202e6, 5611e6],
+        'Receivables': [5138e6, 6304e61],
         'Inventory': [500e6, 300e6, 400e6],
-        'Retained_Earnings': [5000e6, -30000e6, -50000e6],
-        'Market_Cap': [115000e6, 45000e6, 150e6],
-        'Depreciation': [8485e6, 4831e6, 3291e6]
+        'Retained_Earnings': [17694e6, 19172e6],
+        'Market_Cap': [115000e6, 45000e6],
+        'Depreciation': [6373e6, 7490e6],
     })
     
     # IL&FS Data (2015-2018)
