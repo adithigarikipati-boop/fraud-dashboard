@@ -66,36 +66,30 @@ st.markdown("""
 @st.cache_data
 def load_company_data():
     """Load financial data for all companies"""
-
-        # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
- worldcom = pd.DataFrame({
-    'Year': [2000, 2001, 2002],
     
-    # Income Statement - From Consolidated Statements of Operations (RESTATED)
-    'Revenue': [39344e6, 37668e6, 32202e6],  # In millions, converted to dollars
-    'COGS': [16903e6, 16015e6, 14651e6],  
-    'Operating_Expenses': [71520e6, 33097e6, 21773e6],  
-    'EBIT': [-49079e6, -11444e6, -4222e6],  
-    'Net_Income': [-48909e6, -15616e6, -9192e6], 
-    
-    # Balance Sheet - From Consolidated Balance Sheets (RESTATED)
-    'Total_Assets': [70000e6, 33706e6, 26536e6],  
-    'Current_Assets': [15000e6, 8366e6, 9649e6],  
-    'Fixed_Assets': [50000e6, 21486e6, 14190e6], 
-    'Current_Liabilities': [20000e6, 13390e6, 7422e6],  
-    'Total_Debt': [30000e6, 29310e6, 38200e6],  
-    'Total_Equity': [10000e6, -12941e6, -22295e6],  
-    
-    # Additional details
-    'Receivables': [7000e6, 5611e6, 5611e6], 
-    'Inventory': [500e6, 300e6, 400e6],  
-    'Retained_Earnings': [5000e6, -30000e6, -50000e6],  
-    'Market_Cap': [115000e6, 45000e6, 150e6], 
-    'Depreciation': [8485e6, 4831e6, 3291e6]  
-})
+    # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
+    worldcom = pd.DataFrame({
+        'Year': [2000, 2001, 2002],
+        'Revenue': [39344e6, 37668e6, 32202e6],
+        'COGS': [16903e6, 16015e6, 14651e6],
+        'Operating_Expenses': [71520e6, 33097e6, 21773e6],
+        'EBIT': [-49079e6, -11444e6, -4222e6],
+        'Net_Income': [-48909e6, -15616e6, -9192e6],
+        'Total_Assets': [70000e6, 33706e6, 26536e6],
+        'Current_Assets': [15000e6, 8366e6, 9649e6],
+        'Fixed_Assets': [50000e6, 21486e6, 14190e6],
+        'Current_Liabilities': [20000e6, 13390e6, 7422e6],
+        'Total_Debt': [30000e6, 29310e6, 38200e6],
+        'Total_Equity': [10000e6, -12941e6, -22295e6],
+        'Receivables': [7000e6, 5611e6, 5611e6],
+        'Inventory': [500e6, 300e6, 400e6],
+        'Retained_Earnings': [5000e6, -30000e6, -50000e6],
+        'Market_Cap': [115000e6, 45000e6, 150e6],
+        'Depreciation': [8485e6, 4831e6, 3291e6]
+    })
     
     # IL&FS Data (2015-2018)
-ilfs = pd.DataFrame({
+    ilfs = pd.DataFrame({
         'Year': [2015, 2016, 2017, 2018],
         'Revenue': [120.5e8, 135.2e8, 148.9e8, 142.3e8],
         'COGS': [45.2e8, 52.1e8, 58.7e8, 62.4e8],
@@ -116,7 +110,7 @@ ilfs = pd.DataFrame({
     })
     
     # Xerox Corporation Data (1997-2000)
-xerox = pd.DataFrame({
+    xerox = pd.DataFrame({
         'Year': [1997, 1998, 1999, 2000],
         'Revenue': [18.166e9, 19.447e9, 19.228e9, 18.632e9],
         'COGS': [9.456e9, 10.234e9, 10.128e9, 9.845e9],
@@ -137,7 +131,7 @@ xerox = pd.DataFrame({
     })
     
     # Bhushan Steel Data (2014-2017)
-bhushan = pd.DataFrame({
+    bhushan = pd.DataFrame({
         'Year': [2014, 2015, 2016, 2017],
         'Revenue': [78.45e8, 85.67e8, 82.34e8, 75.89e8],
         'COGS': [62.34e8, 68.45e8, 67.89e8, 65.23e8],
@@ -163,7 +157,6 @@ bhushan = pd.DataFrame({
         'Xerox': xerox,
         'Bhushan Steel': bhushan
     }
-
 # =======================
 # FRAUD DETECTION MODELS
 # =======================
