@@ -409,7 +409,8 @@ def main():
         height=400,
         template='plotly_dark',
         paper_bgcolor='rgba(0,0,0,0)',
-        plot_bgcolor='rgba(15,23,42,0.8)'
+        plot_bgcolor='rgba(15,23,42,0.8)',
+        xaxis=dict(type='category')
     )
     
     st.plotly_chart(fig_benford, use_container_width=True)
@@ -437,7 +438,8 @@ def main():
             template='plotly_dark', 
             height=400,
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(15,23,42,0.8)'
+            plot_bgcolor='rgba(15,23,42,0.8)',
+            xaxis=dict(type='category')
         )
         st.plotly_chart(fig_prof, use_container_width=True)
     
@@ -456,7 +458,8 @@ def main():
             template='plotly_dark', 
             height=400,
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(15,23,42,0.8)'
+            plot_bgcolor='rgba(15,23,42,0.8)',
+            xaxis=dict(type='category')
         )
         st.plotly_chart(fig_liq, use_container_width=True)
     
@@ -473,7 +476,8 @@ def main():
             template='plotly_dark', 
             height=400,
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(15,23,42,0.8)'
+            plot_bgcolor='rgba(15,23,42,0.8)',
+            xaxis=dict(type='category')
         )
         st.plotly_chart(fig_lev, use_container_width=True)
     
@@ -487,7 +491,8 @@ def main():
             template='plotly_dark', 
             height=400,
             paper_bgcolor='rgba(0,0,0,0)',
-            plot_bgcolor='rgba(15,23,42,0.8)'
+            plot_bgcolor='rgba(15,23,42,0.8)',
+            xaxis=dict(type='category')
         )
         st.plotly_chart(fig_eff, use_container_width=True)
     
