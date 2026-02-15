@@ -431,7 +431,8 @@ def main():
             <h4 style='color: #f1f5f9;'>Analysis Year</h4>
             <h2 style='color: #3b82f6; font-size: 3rem;'>{selected_year}</h2>
             <p style='color: #94a3b8; margin-top: 1rem;'>Z-Score: {z_score:.3f}</p>
-            <p style='color: #94a3b8;'>M-Score: {m_score:.3f}</p>
+            <p style='color: #94a3b8;'>M-Score: {m_display}</p>
+            
         </div>
         """, unsafe_allow_html=True)
     
