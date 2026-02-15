@@ -195,8 +195,8 @@ def calculate_beneish_m_score(df):
         sgi = current['Revenue'] / previous['Revenue']
         depi = (previous['Depreciation']/(previous['Depreciation']+previous['Fixed_Assets'])) / \
                (current['Depreciation']/(current['Depreciation']+current['Fixed_Assets']))
-        sgai = (current['Operating_Expenses']/current['Revenue']) / \
-               (previous['Operating_Expenses']/previous['Revenue'])
+        sgai = (current['SGA']/current['Revenue']) / \
+               (previous['SGA']/previous['Revenue'])
         lvgi = ((current['Total_Debt'])/current['Total_Assets']) / \
                ((previous['Total_Debt'])/previous['Total_Assets'])
         
