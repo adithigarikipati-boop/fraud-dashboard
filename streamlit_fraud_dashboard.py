@@ -66,9 +66,7 @@ st.markdown("""
 @st.cache_data
 def load_company_data():
     """Load financial data for all companies"""
-    
-    # WorldCom Data (2000-2002)
-    worldcom = pd.DataFrame({
+
         # WorldCom Data (2000-2002) - RESTATED Financials from SEC Filing
 worldcom = pd.DataFrame({
     'Year': [2000, 2001, 2002],
