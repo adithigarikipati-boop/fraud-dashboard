@@ -498,6 +498,12 @@ def main():
         fig_prof.add_trace(go.Scatter(x=ratios['Year'], y=ratios['ROA'], 
                                        mode='lines+markers', name='ROA %',
                                        line=dict(color='#f59e0b', width=3)))
+        fig_prof.add_hline(y=5,line_dash="dot",line_color="orange",annotation_text="Low Profit Warning (5%)",
+                           annotation_position="top right")
+        fig_prof.add_hline(y=0,line_dash="dot",line_color="red",
+                           annotation_text="Negative Return Zone",
+                           annotation_position="bottom right")
+
         fig_prof.update_layout(
             title="Profitability Ratios", 
             template='plotly_dark', 
@@ -517,7 +523,7 @@ def main():
                                       mode='lines+markers', name='Quick Ratio',
                                       line=dict(color='#ec4899', width=3)))
         fig_liq.add_hline(y=1.0, line_dash="dash", line_color="red", 
-                          annotation_text="Minimum Safe Level")
+                          annotation_text="Minimum Safe Level",annotation_position="top right")
         fig_liq.update_layout(
             title="Liquidity Ratios", 
             template='plotly_dark', 
@@ -536,6 +542,10 @@ def main():
         fig_lev.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Debt_Ratio'], 
                                       mode='lines+markers', name='Debt Ratio %',
                                       line=dict(color='#f59e0b', width=3)))
+        fig_lev.add_hline(y=2.0,line_dash="dot",line_color="red",
+                          annotation_text="High Leverage Threshold (2.0)",
+                          annotation_position="top right")
+
         fig_lev.update_layout(
             title="Leverage Ratios", 
             template='plotly_dark', 
