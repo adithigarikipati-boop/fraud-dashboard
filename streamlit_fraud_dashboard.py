@@ -80,7 +80,7 @@ def load_company_data():
         'Fixed_Assets': [54653e6, 58365e6],
         'Current_Liabilities': [17149e6, 20063e6],
         'Total_Debt': [30323e6, 31983e6],
-        'Total_Equity': [10000e6, -12941e6, -22295e6],
+        'Total_Equity': [46557e6, 45289e6],
         'Receivables': [5138e6, 6304e61],
         'Inventory': [500e6, 300e6, 400e6],
         'Retained_Earnings': [17694e6, 19172e6],
