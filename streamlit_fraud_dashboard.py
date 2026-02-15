@@ -344,7 +344,7 @@ def main():
 
     if np.isnan(m_score):
     m_display = "Not Available (First Year)"
-    else:
+else:
     m_display = f"{m_score:.3f}"
 
     # Risk assessment
