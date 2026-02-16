@@ -598,7 +598,7 @@ def main():
     
     # Footer
     st.markdown("---")
-    st.markdown("<p style='text-align: center; color: #94a3b8;'>Financial Fraud Analysis Dashboard | Created for Educational Purposes</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #94a3b8;'>Financial Fraud Analysis Dashboard</p>", unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
