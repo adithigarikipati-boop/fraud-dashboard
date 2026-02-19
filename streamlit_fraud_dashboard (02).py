@@ -267,6 +267,9 @@ def calculate_common_size(df):
     cs['Year'] = df['Year']
     cs['COGS_%'] = df['COGS'] / df['Revenue'] * 100
     cs['Net_Income_%'] = df['Net_Income'] / df['Revenue'] * 100
+    cs['SGA_%'] = df['SGA'] / df['Revenue'] * 100
+    cs['EBIT_%'] = df['EBIT'] / df['Revenue'] * 100
+    cs['Net_Income_%'] = df['Net_Income'] / df['Revenue'] * 100
     return cs
 
 def calculate_trend(df):
