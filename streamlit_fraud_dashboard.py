@@ -494,15 +494,15 @@ def main():
     st.plotly_chart(fig_benford, use_container_width=True)
     
 # Financial Ratios
-    st.markdown("<h2>📈 Financial Ratios Analysis</h2>", unsafe_allow_html=True)
-    ratios = calculate_all_ratios(df)
-analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
+ st.markdown("<h2>📈 Financial Ratios Analysis</h2>", unsafe_allow_html=True)
+ ratios = calculate_all_ratios(df)
+ analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
 
 # ======================
 # RATIOS TAB
 # ======================
-with analysis_tabs[0]:
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
+ with analysis_tabs[0]:
+     tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
     with tab1:
         fig_prof = go.Figure()
         fig_prof.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Gross_Margin'], 
