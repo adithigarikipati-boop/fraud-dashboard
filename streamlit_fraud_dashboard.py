@@ -490,13 +490,13 @@ def main():
     with tab1:
         fig_prof = go.Figure()
         fig_prof.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Gross_Margin'], 
-                                       mode='lines+markers', name='Gross Margin %',
+                                       mode='lines+markers+text', name='Gross Margin %',
                                        line=dict(color='#10b981', width=3)))
         fig_prof.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Net_Profit_Margin'], 
-                                       mode='lines+markers', name='Net Profit Margin %',
+                                       mode='lines+markers+text', name='Net Profit Margin %',
                                        line=dict(color='#3b82f6', width=3)))
         fig_prof.add_trace(go.Scatter(x=ratios['Year'], y=ratios['ROA'], 
-                                       mode='lines+markers', name='ROA %',
+                                       mode='lines+markers+text', name='ROA %',
                                        line=dict(color='#f59e0b', width=3)))
         fig_prof.add_hline(y=5,line_dash="dot",line_color="orange",annotation_text="Low Profit Warning (5%)",
                            annotation_position="top right")
@@ -517,10 +517,10 @@ def main():
     with tab2:
         fig_liq = go.Figure()
         fig_liq.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Current_Ratio'], 
-                                      mode='lines+markers', name='Current Ratio',
+                                      mode='lines+markers+text', name='Current Ratio',
                                       line=dict(color='#8b5cf6', width=3)))
         fig_liq.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Quick_Ratio'], 
-                                      mode='lines+markers', name='Quick Ratio',
+                                      mode='lines+markers+text', name='Quick Ratio',
                                       line=dict(color='#ec4899', width=3)))
         fig_liq.add_hline(y=1.0, line_dash="dash", line_color="red", 
                           annotation_text="Minimum Safe Level",annotation_position="top right")
@@ -537,10 +537,10 @@ def main():
     with tab3:
         fig_lev = go.Figure()
         fig_lev.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Debt_to_Equity'], 
-                                      mode='lines+markers', name='Debt to Equity',
+                                      mode='lines+markers+text', name='Debt to Equity',
                                       line=dict(color='#ef4444', width=3)))
         fig_lev.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Debt_Ratio'], 
-                                      mode='lines+markers', name='Debt Ratio %',
+                                      mode='lines+markers+text', name='Debt Ratio %',
                                       line=dict(color='#f59e0b', width=3)))
         fig_lev.add_hline(y=2.0,line_dash="dot",line_color="red",
                           annotation_text="High Leverage Threshold (2.0)",
@@ -559,7 +559,7 @@ def main():
     with tab4:
         fig_eff = go.Figure()
         fig_eff.add_trace(go.Scatter(x=ratios['Year'], y=ratios['Asset_Turnover'], 
-                                      mode='lines+markers', name='Asset Turnover',
+                                      mode='lines+markers+text', name='Asset Turnover',
                                       line=dict(color='#06b6d4', width=3)))
         fig_eff.update_layout(
             title="Efficiency Ratios", 
