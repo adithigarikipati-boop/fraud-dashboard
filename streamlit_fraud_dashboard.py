@@ -262,6 +262,42 @@ def calculate_all_ratios(df):
     
     return ratios
 
+    # =========================
+# COMMON SIZE FUNCTION
+# =========================
+def calculate_common_size(df):
+    cs = pd.DataFrame()
+    cs['Year'] = df['Year']
+
+    # Income statement
+    cs['COGS_%'] = df['COGS'] / df['Revenue'] * 100
+    cs['SGA_%'] = df['SGA'] / df['Revenue'] * 100
+    cs['EBIT_%'] = df['EBIT'] / df['Revenue'] * 100
+    cs['Net_Income_%'] = df['Net_Income'] / df['Revenue'] * 100
+
+    # Balance sheet
+    cs['Current_Assets_%'] = df['Current_Assets'] / df['Total_Assets'] * 100
+    cs['Debt_%'] = df['Total_Debt'] / df['Total_Assets'] * 100
+    cs['Equity_%'] = df['Total_Equity'] / df['Total_Assets'] * 100
+
+    return cs
+
+
+# =========================
+# TREND FUNCTION
+# =========================
+def calculate_trend(df):
+    trend = pd.DataFrame()
+    trend['Year'] = df['Year']
+
+    base = df.iloc[0]
+
+    trend['Revenue_Index'] = df['Revenue'] / base['Revenue'] * 100
+    trend['Assets_Index'] = df['Total_Assets'] / base['Total_Assets'] * 100
+    trend['Net_Income_Index'] = df['Net_Income'] / base['Net_Income'] * 100
+
+    return trend   
+
 # =======================
 # MAIN APP
 # =======================
