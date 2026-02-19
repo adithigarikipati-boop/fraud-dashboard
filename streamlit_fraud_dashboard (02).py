@@ -604,7 +604,7 @@ def main():
                                      mode='lines+markers+text', name='Asset Turnover',
                                      line=dict(color='#06b6d4', width=3)))
             # Receivables Turnover
-            fig_eff.add_trace(go.Scatter(x=ratios['Year'],ratios['Receivables_Turnover'],
+            fig_eff.add_trace(go.Scatter(x=ratios['Year'],y=ratios['Receivables_Turnover'],
                                          mode='lines+markers+text',name='Receivables Turnover',
                                          line=dict(color='#22c55e', width=3)))
 # Days Sales Outstanding
