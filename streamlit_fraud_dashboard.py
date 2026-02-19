@@ -494,9 +494,9 @@ def main():
     st.plotly_chart(fig_benford, use_container_width=True)
     
 # Financial Ratios
- st.markdown("<h2>📈 Financial Ratios Analysis</h2>", unsafe_allow_html=True)
- ratios = calculate_all_ratios(df)
- analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
+  st.markdown("<h2>📈 Financial Ratios Analysis</h2>", unsafe_allow_html=True)
+  ratios = calculate_all_ratios(df)
+  analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
 
 # ======================
 # RATIOS TAB
