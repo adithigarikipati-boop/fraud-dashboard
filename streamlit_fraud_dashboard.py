@@ -518,16 +518,13 @@ def main():
     st.markdown("<h2>📈 Financial Ratios Analysis</h2>", unsafe_allow_html=True)
     
     ratios = calculate_all_ratios(df)
-    
-    
     analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
 
 # ======================
 # RATIOS TAB
 # ======================
-with analysis_tabs[0]:
-
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
+ with analysis_tabs[0]:
+     tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
 
     # -------------------
     # PROFITABILITY
