@@ -523,8 +523,8 @@ def main():
 # ======================
 # RATIOS TAB
 # ======================
- with analysis_tabs[0]:
-     tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
+with analysis_tabs[0]:
+    tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
 
     # -------------------
     # PROFITABILITY
