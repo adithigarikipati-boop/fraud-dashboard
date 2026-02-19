@@ -520,8 +520,10 @@ def main():
     ratios = calculate_all_ratios(df)
     
     
-    tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
-    analysis_tabs = st.tabs(["Ratios","Common Size","Trend"])
+    analysis_tabs = st.tabs(["📊 Ratios","📑 Common Size","📈 Trend"])
+
+    with analysis_tabs[0]:
+        tab1, tab2, tab3, tab4 = st.tabs(["📊 Profitability", "💧 Liquidity", "⚖️ Leverage", "⚡ Efficiency"])
     
     with tab1:
         fig_prof = go.Figure()
