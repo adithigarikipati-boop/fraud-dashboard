@@ -270,6 +270,10 @@ def calculate_common_size(df):
     cs['SGA_%'] = df['SGA'] / df['Revenue'] * 100
     cs['EBIT_%'] = df['EBIT'] / df['Revenue'] * 100
     cs['Net_Income_%'] = df['Net_Income'] / df['Revenue'] * 100
+    cs['Current_Assets_%'] = df['Current_Assets'] / df['Total_Assets'] * 100
+    cs['Fixed_Assets_%'] = df['Fixed_Assets'] / df['Total_Assets'] * 100
+    cs['Debt_%'] = df['Total_Debt'] / df['Total_Assets'] * 100
+    cs['Equity_%'] = df['Total_Equity'] / df['Total_Assets'] * 100
     return cs
 
 def calculate_trend(df):
@@ -277,6 +281,8 @@ def calculate_trend(df):
     trend['Year'] = df['Year']
     base = df.iloc[0]
     trend['Revenue_Index'] = df['Revenue'] / base['Revenue'] * 100
+    
+    
     return trend
 # =======================
 # MAIN APP
