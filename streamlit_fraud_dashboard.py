@@ -281,8 +281,6 @@ def calculate_common_size(df):
     cs['Equity_%'] = df['Total_Equity'] / df['Total_Assets'] * 100
 
     return cs
-
-
 # =========================
 # TREND FUNCTION
 # =========================
