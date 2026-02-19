@@ -281,7 +281,13 @@ def calculate_trend(df):
     trend['Year'] = df['Year']
     base = df.iloc[0]
     trend['Revenue_Index'] = df['Revenue'] / base['Revenue'] * 100
-    
+    trend['EBIT_Index'] = df['EBIT'] / base['EBIT'] * 100
+    trend['Net_Income_Index'] = df['Net_Income'] / base['Net_Income'] * 100
+    trend['Assets_Index'] = df['Total_Assets'] / base['Total_Assets'] * 100
+    trend['Debt_Index'] = df['Total_Debt'] / base['Total_Debt'] * 100
+    trend['Equity_Index'] = df['Total_Equity'] / base['Total_Equity'] * 100
+    trend['Current_Assets_Index'] = df['Current_Assets'] / base['Current_Assets'] * 100
+    trend['Current_Liabilities_Index'] = df['Current_Liabilities'] / base['Current_Liabilities'] * 100
     
     return trend
 # =======================
