@@ -625,6 +625,18 @@ with analysis_tabs[0]:
             xaxis=dict(type='category')
         )
         st.plotly_chart(fig_eff, use_container_width=True)
+# ======================
+# COMMON SIZE TAB
+# ======================
+with analysis_tabs[1]:
+    cs = calculate_common_size(df)
+    st.write(cs)
+# ======================
+# TREND TAB
+# ======================
+with analysis_tabs[2]:
+    trend = calculate_trend(df)
+    st.write(trend)
 
     # Red Flags
     st.markdown("<h2>🚩 Red Flags Detected</h2>", unsafe_allow_html=True)
