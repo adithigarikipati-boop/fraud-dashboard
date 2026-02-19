@@ -136,7 +136,7 @@ def load_company_data():
     })
     
     # Bhushan Steel Data (2014-2017)
-   bhushan = pd.DataFrame({
+    bhushan = pd.DataFrame({
        'Year': [2014, 2015, 2016, 2017],
        'Revenue': [7845.0e8, 8567.0e8, 8234.0e8, 7589.0e8],
        'COGS': [6234.0e8, 6845.0e8, 6789.0e8, 6523.0e8],
