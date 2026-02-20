@@ -69,24 +69,24 @@ def load_company_data():
     
     # WorldCom Data (2000-2001) 
     worldcom = pd.DataFrame({
-        'Year': [2000, 2001],
-        'Revenue': [39090e6, 35181e6],
-        'COGS': [ 15508e6, 15910e6],
-        'SGA': [7421e6, 7547e6],
-        'EBIT': [10345e6, 7519e6],
-        'Net_Income': [5134e6, 1514e6],
-        'Total_Assets': [104363e6, 107485e6],
-        'Current_Assets': [21033e6, 19526e6],
-        'Fixed_Assets': [54653e6, 58365e6],
-        'Current_Liabilities': [17149e6, 20063e6],
-        'Total_Debt': [30323e6, 31983e6],
-        'Total_Equity': [46557e6, 45289e6],
-        'Receivables': [5138e6, 6304e6],
-        'Inventory': [1465e6, 1513e6],
-        'Retained_Earnings': [17694e6, 19172e6],
-        'Market_Cap': [115000e6, 45000e6],
+        'Year': [1999,2000, 2001],
+        'Revenue': [36000e6,39090e6, 35181e6],
+        'COGS': [17000e6, 15508e6, 15910e6],
+        'SGA': [7000e6, 7421e6, 7547e6],
+        'EBIT': [9000e6,10345e6, 7519e6],
+        'Net_Income': [4200e6,5134e6, 1514e6],
+        'Total_Assets': [95000e6, 104363e6, 107485e6],
+        'Current_Assets': [95000e6, 21033e6, 19526e6],
+        'Fixed_Assets': [50000e6,54653e6, 58365e6],
+        'Current_Liabilities': [16000e6, 17149e6, 20063e6],
+        'Total_Debt': [26000e6, 30323e6, 31983e6],
+        'Total_Equity': [42000e6,46557e6, 45289e6],
+        'Receivables': [4500e6,5138e6, 6304e6],
+        'Inventory': [1300e6, 1465e6, 1513e6],
+        'Retained_Earnings': [15000e6,17694e6, 19172e6],
+        'Market_Cap': [150000e6,115000e6, 45000e6],
         'Depreciation': [6373e6, 7490e6],
-        'CFO':[10240e6, 7001e6]
+        'CFO':[3500e6, 10240e6, 7001e6]
     })
     
     # IL&FS Data (2015-2018)
