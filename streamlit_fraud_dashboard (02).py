@@ -85,7 +85,7 @@ def load_company_data():
         'Inventory': [1300e6, 1465e6, 1513e6],
         'Retained_Earnings': [15000e6,17694e6, 19172e6],
         'Market_Cap': [150000e6,115000e6, 45000e6],
-        'Depreciation': [6373e6, 7490e6],
+        'Depreciation': [6000e6, 6373e6, 7490e6],
         'CFO':[3500e6, 10240e6, 7001e6]
     })
     
